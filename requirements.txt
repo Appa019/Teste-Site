@@ -1,8 +1,0 @@
-streamlit
-pandas
-openpyxl
-selenium
-webdriver-manager
-opencv-python-headless
-pytesseract
-tensorflow-cpu
