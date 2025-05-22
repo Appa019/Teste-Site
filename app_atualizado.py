@@ -1026,7 +1026,7 @@ def formatar_numero_brasileiro(x):
 # NOVA FUNÇÃO: Extrair Número de Instalação e Referência do PDF
 def extrair_info_cabecalho(texto_pdf, client):
     # Limitar a 500 palavras para melhorar a performance
-    texto_limitado = " ".join(texto_pdf.split()[:150])
+    texto_limitado = " ".join(texto_pdf.split()[:400])
 
     prompt_extracao_cabecalho = """
     Você é um assistente especializado em extrair informações de documentos.
@@ -1053,7 +1053,7 @@ def extrair_info_cabecalho(texto_pdf, client):
                 {"role": "system", "content": prompt_extracao_cabecalho},
                 {"role": "user", "content": texto_limitado}
             ],
-            temperature=0
+            temperature=0.4
         )
 
         custo = calcular_custo_api(response)
