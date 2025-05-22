@@ -989,7 +989,7 @@ def extrair_texto(pdf_path_ou_bytes):
             return ""
 
 def extrair_trecho_itens_fatura(texto_pdf):
-    padrao_inicio = r"(?i)itens\s+da\s+fatura"
+    padrao_inicio =  r"(?i)(itens\s+da\s+fatura|itens\s+de\s+fatura)"
     padrao_fim = r"(?i)(total\s+da\s+fatura|total\s+a\s+pagar|total\s+geral|valor\s+total|total\s+da\s+nota)"
     
     match_inicio = re.search(padrao_inicio, texto_pdf)
