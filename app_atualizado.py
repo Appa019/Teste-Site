@@ -14,7 +14,7 @@ import openpyxl
 from openpyxl.styles import Font, PatternFill
 from openpyxl.utils import get_column_letter
 import requests
-import PyMuPDF as fitz
+import pymupdf as fitz
 import pikepdf
 from openai import OpenAI
 
